@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <cstdlib>
 
 std::string getInput(const std::string& prompt) {
     std::string input;
@@ -59,7 +60,7 @@ int main() {
     PhoneBook phoneBook;
     std::string command;
     
-    std::cout << "Welcome to My Awesome PhoneBook!" << std::endl;
+    std::cout << "Welcome!" << std::endl;
     
     while (true) {
         std::cout << "Enter command (ADD, SEARCH, EXIT): ";

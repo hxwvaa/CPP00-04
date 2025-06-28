@@ -7,17 +7,19 @@ class PhoneBook {
 private:
     Contact _contacts[8];
     int _currentIndex;
-    int _totalContacts;
+    int _contactCount;
+
 public:
     PhoneBook();
     ~PhoneBook();
 
+    void addContact(const Contact& contact);
     void addContact(const std::string& firstName, const std::string& lastName,
                     const std::string& nickname, const std::string& phoneNumber,
                     const std::string& darkestSecret);
-    void searchContacts() const;
+    void displayContacts() const;
     void displayContact(int index) const;
-    void displayAllContacts() const;
+    int getContactCount() const;
 
 };
 #endif
