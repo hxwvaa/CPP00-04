@@ -29,15 +29,15 @@ void PhoneBook::addContact(const Contact& contact) {
     }
 }
 
-void PhoneBook::addContact(const std::string& firstName, const std::string& lastName,
-                            const std::string& nickname, const std::string& phoneNumber,
-                            const std::string& darkestSecret) {
-    _contacts[_currentIndex].setContact(firstName, lastName, nickname, phoneNumber, darkestSecret);
-    _currentIndex = (_currentIndex + 1) % 8; // Wrap around if we exceed 8 contacts
-    if (_contactCount < 8) {
-        _contactCount++;
-    }
-}
+// void PhoneBook::addContact(const std::string& firstName, const std::string& lastName,
+//                             const std::string& nickname, const std::string& phoneNumber,
+//                             const std::string& darkestSecret) {
+//     _contacts[_currentIndex].setContact(firstName, lastName, nickname, phoneNumber, darkestSecret);
+//     _currentIndex = (_currentIndex + 1) % 8; // Wrap around if we exceed 8 contacts
+//     if (_contactCount < 8) {
+//         _contactCount++;
+//     }
+// }
 
 
 void PhoneBook::displayContacts() const {

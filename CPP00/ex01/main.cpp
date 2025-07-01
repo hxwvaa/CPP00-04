@@ -11,18 +11,41 @@ std::string getInput(const std::string& prompt) {
         std::getline(std::cin, input);
         if (std::cin.eof()) {
             std::cout << std::endl;
-            exit(0);
+            return "";
         }
     } while (input.empty());
     return input;
 }
 
+std::string getphoneNumber(const std::string& prompt) {
+    std::string input;
+    do {
+        std::cout << prompt;
+        std::getline(std::cin, input);
+        if (std::cin.eof()) {
+            std::cout << std::endl;
+            return "";
+        }
+    } while (input.empty() || !input.find_first_not_of("0123456789")) ;
+    return input;
+}
+
 void addContact(PhoneBook& phoneBook) {
     std::string firstName = getInput("Enter first name: ");
+    if (firstName.empty())
+        return;
     std::string lastName = getInput("Enter last name: ");
+    if (lastName.empty())
+        return;
     std::string nickname = getInput("Enter nickname: ");
-    std::string phoneNumber = getInput("Enter phone number: ");
+    if (nickname.empty())
+        return;
+    std::string phoneNumber = getphoneNumber("Enter phone number: ");
+    if (phoneNumber.empty())
+        return;
     std::string darkestSecret = getInput("Enter darkest secret: ");
+    if (darkestSecret.empty())
+        return;
     
     Contact contact;
     contact.setContact(firstName, lastName, nickname, phoneNumber, darkestSecret);
@@ -43,7 +66,7 @@ void searchContact(PhoneBook& phoneBook) {
     std::getline(std::cin, input);
     if (std::cin.eof()) {
         std::cout << std::endl;
-        exit(0);
+        return;
     }
     
     std::stringstream ss(input);
@@ -66,11 +89,6 @@ int main() {
         std::cout << "Enter command (ADD, SEARCH, EXIT): ";
         std::getline(std::cin, command);
         
-        if (std::cin.eof()) {
-            std::cout << std::endl;
-            break;
-        }
-        
         if (command == "ADD") {
             addContact(phoneBook);
         } else if (command == "SEARCH") {
@@ -80,6 +98,11 @@ int main() {
             break;
         } else if (!command.empty()) {
             std::cout << "Invalid command!" << std::endl;
+        }
+
+        if (std::cin.eof()) {
+            std::cout << std::endl;
+            break;
         }
     }
     

@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
-#include <cstring>
 #include <cctype>
+#include <string>
 
 int main(int argc, char **argv)
 {
@@ -11,7 +10,8 @@ int main(int argc, char **argv)
     {
         for(int i = 1; i < argc; i++)
         {
-            for(size_t j = 0; j < std::strlen(argv[i]); j++)
+            std::string arg(argv[i]);
+            for(size_t j = 0; j < arg.length(); j++)
                 std::cout << static_cast<char>(std::toupper(static_cast<unsigned char>(argv[i][j])));
         }
         std::cout << "\n";
