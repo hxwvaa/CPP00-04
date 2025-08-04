@@ -1,8 +1,8 @@
 #include "ClapTrap.hpp"
 
 int main() {
-    ClapTrap claptrap1("CT1");
-    ClapTrap claptrap2("CT2");
+    ClapTrap claptrap1("Me");
+    ClapTrap claptrap2("You");
 
     claptrap1.attack(claptrap2.getName());
     claptrap2.takeDamage(5);
