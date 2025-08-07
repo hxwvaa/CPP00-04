@@ -5,7 +5,7 @@ int main() {
     ScavTrap scavtrap2("You");
 
     scavtrap1.attack(scavtrap2.getName());
-    scavtrap2.takeDamage(-15);
+    scavtrap2.takeDamage(5);
     scavtrap2.beRepaired(3);
 
     scavtrap1.attack(scavtrap2.getName());
