@@ -2,8 +2,12 @@
 #define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal {
+
+    private:
+        Brain *brain;
 
     public:
         Dog();
@@ -14,6 +18,7 @@ class Dog : public Animal {
         void makeSound() const;
         const std::string &getType() const;
         void setType(const std::string &type);
+        Brain *getBrain() const;
     };
 
 
