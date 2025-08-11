@@ -26,10 +26,6 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::guardGate() {
-    if (hitPoints <= 0 || energyPoints <= 0) {
-        std::cout << "ScavTrap " << name << " cannot guard gate, it is out of hit points!" << std::endl;
-        return;
-    }
     std::cout << "ScavTrap " << name << " is now in gate keeper mode." << std::endl;
 }
 
