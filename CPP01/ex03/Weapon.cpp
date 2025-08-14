@@ -1,4 +1,4 @@
-#include "weapon.hpp"
+#include "Weapon.hpp"
 
 Weapon::Weapon(std::string type) : _type(type) {
     std::cout << "Weapon created: " << _type << std::endl;

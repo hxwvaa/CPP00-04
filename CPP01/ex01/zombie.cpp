@@ -1,4 +1,4 @@
-#include "zombie.hpp"
+#include "Zombie.hpp"
 
 Zombie::Zombie(){
     std::cout << "Zombie created." << std::endl;

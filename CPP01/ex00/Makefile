@@ -2,7 +2,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
-SRCS = main.cpp newZombie.cpp randomChump.cpp zombie.cpp
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

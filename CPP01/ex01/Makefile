@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombieHorde
 
-SRCS = main.cpp zombie.cpp zombieHorde.cpp
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-%.o: %.cpp zombie.hpp
+%.o: %.cpp Zombie.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
