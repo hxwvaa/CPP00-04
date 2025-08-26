@@ -1,8 +1,8 @@
 #include "FragTrap.hpp"
 
 int main() {
-    FragTrap fragtrap1("Me");
-    FragTrap fragtrap2("You");
+    FragTrap fragtrap1("FragTrap1");
+    FragTrap fragtrap2("FragTrap2");
 
     fragtrap1.attack(fragtrap2.getName());
     fragtrap2.takeDamage(5);

@@ -1,8 +1,8 @@
 #include "ScavTrap.hpp"
 
 int main() {
-    ScavTrap scavtrap1("Me");
-    ScavTrap scavtrap2("You");
+    ScavTrap scavtrap1("ScavTrap1");
+    ScavTrap scavtrap2("ScavTrap2");
 
     scavtrap1.attack(scavtrap2.getName());
     scavtrap2.takeDamage(5);
