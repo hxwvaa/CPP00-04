@@ -2,8 +2,8 @@
 
 Dog::Dog() {
     type = "Dog";
-    brain = new Brain();
     std::cout << "Dog created." << std::endl;
+    brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) : Animal(other) {
